@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="cruds">
+      <div class="head">
+        <div class="container">
+          <h1>CRUDS</h1>
+          <p>PRODUCT MANGEMENT SYSTEM</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="inputs">
+          <form action="" class="first-form" onSubmit={props.handleSubmit}>
+            <input type="text" placeholder="title" id="title" required/>
+            <input type="number" onchange="getTotal()" onkeyup="getTotal()" placeholder="price" id="price" required/>
+            <input type="number" onchange="getTotal()" onkeyup="getTotal()" placeholder="taxes" id="taxes" />
+            <input type="number" onchange="getTotal()" onkeyup="getTotal()" placeholder="ads" id="ads" />
+            <input type="number" onchange="getTotal()" onkeyup="getTotal()" placeholder="discount" id="discount"/>
+            <span class="total" id="total"></span>
+            <input type="number" placeholder="count" id="count"/>
+            <input type="text" placeholder="Category"  id="Category" required/>
+            <input type="submit" class="create but" value="Create" id="creat"></input>
+            <input type="submit" class="create but" value="Update" id="Update"></input>
+          </form>
+        </div>
+        <div class="outputs">
+         <form action="" class="second-form">
+          <input type="text" placeholder="Search" id="textSearch" onkeyup="searchData(this.value)"/>
+          <input onclick="getSearch(this.id)" type="button" value="Search By TItle" class="but" id="SearchTitle">
+          <input onclick="getSearch(this.id)" type="button" value="Search By Category" class="but" id="SearchCategory">
+          <input type="button" value="Delete All" class="but" id="deletAll">
+         </form>
+         <table class="myTable">
+          <thead>
+            <tr>
+              <td>ID</td>
+              <td>TITlE</td>
+              <td>PRICE</td>
+              <td>TAXES</td>
+              <td>ADS</td>
+              <td>DISCOUNT</td>
+              <td>TOTAL</td>
+              <td>CATEGORY</td>
+              <td>UPDATE</td>
+              <td>DELETE</td>
+            </tr>
+          </thead>
+          <tbody id="body">
+            
+          </tbody>
+         </table>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
